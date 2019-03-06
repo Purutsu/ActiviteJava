@@ -1,4 +1,4 @@
 package xyz.chris;
 
-public class Mage {
+public class Mage extends Personnage {
 }

@@ -1,4 +1,4 @@
 package xyz.chris;
 
-public class Rodeur {
+public class Rodeur extends Personnage {
 }

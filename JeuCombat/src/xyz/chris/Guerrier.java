@@ -1,4 +1,4 @@
 package xyz.chris;
 
-public class Guerrier {
+public class Guerrier extends Personnage {
 }
