@@ -40,4 +40,7 @@ abstract class Personnage {
     void setIntelligence(int intelligence){
         this.intelligence = intelligence;
     }
+
+    public abstract void attaqueBasic(Personnage adversaire);
+    public abstract void attaqueSpecial(Personnage adversaire);
 }

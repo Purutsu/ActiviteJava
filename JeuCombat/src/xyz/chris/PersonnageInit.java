@@ -16,6 +16,7 @@ public class PersonnageInit {
             }
             else if (val == 2){
                 System.out.println("Vous êtes désormais un mage aux pouvoirs sans limite. Ils ne passeront pas!");
+                newPerso = new Mage();
             }
             else if (val == 3){
                 System.out.println("Vous êtes désormais un rôdeur malin. Ils ne passeront pas!");
