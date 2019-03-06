@@ -13,6 +13,7 @@ public class PersonnageInit {
             int val = sc.nextInt();
             if (val == 1){
                 System.out.println("Vous êtes désormais un(e) puissant(e) guerrier(e), sans peur et sans reproche");
+                newPerso = new Guerrier();
             }
             else if (val == 2){
                 System.out.println("Vous êtes désormais un mage aux pouvoirs sans limite. Ils ne passeront pas!");
@@ -20,6 +21,7 @@ public class PersonnageInit {
             }
             else if (val == 3){
                 System.out.println("Vous êtes désormais un rôdeur malin. Ils ne passeront pas!");
+                newPerso = new Rodeur();
             }
             else{
                 System.out.println("Valeur incorrecte ");
@@ -42,21 +44,21 @@ public class PersonnageInit {
 /** @p4 = determine les valeurs des stats
  * @valueStats = valeur enregistré pour le personnage
  * */
-            int p4;
+            int stats;
 
             try {
                 System.out.println("Veuillez choisir votre niveau (1-100)");
-                p4 = sc.nextInt();
-                newPerso.setNiveau(p4);
+                stats = sc.nextInt();
+                newPerso.setNiveau(stats);
                 System.out.println("Votre force?");
-                p4 = sc.nextInt();
-                newPerso.setForce(p4);
+                stats = sc.nextInt();
+                newPerso.setForce(stats);
                 System.out.println("Votre agilité?");
-                p4 = sc.nextInt();
-                newPerso.setAgi(p4);
+                stats = sc.nextInt();
+                newPerso.setAgi(stats);
                 System.out.println("Votre intelligence?");
-                p4 = sc.nextInt();
-                newPerso.setIntelligence(p4);
+                stats = sc.nextInt();
+                newPerso.setIntelligence(stats);
 
                 newPerso.vit = 5 * newPerso.niveau;
 
@@ -82,6 +84,7 @@ public class PersonnageInit {
 
     public Personnage initPersonnage(){
         this.choisirClasse();
+        this.selectStats();
         return newPerso;
     }
 }

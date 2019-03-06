@@ -1,7 +1,7 @@
 package xyz.chris;
 
 public class Mage extends Personnage {
-    Mage(){}
+    protected Mage(){}
     @Override
     public void attaqueBasic(Personnage adversaire){
         int atk = this.intelligence;
