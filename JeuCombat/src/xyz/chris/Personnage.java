@@ -32,7 +32,7 @@ abstract class Personnage {
         return agi;
     }
     void setAgi(int agi){
-        this.agi = agi
+        this.agi = agi;
     }
     public int getIntelligence(){
         return intelligence;

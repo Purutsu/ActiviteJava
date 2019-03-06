@@ -1,13 +1,13 @@
 package xyz.chris;
 
 public class Guerrier extends Personnage {
-    protected Guerrier(){}
+    Guerrier(){}
     @Override
     public void attaqueBasic(Personnage adversaire){
         int atk = this.force;
         System.out.println("Joueur "+this.joueur+" attaque avec Coup d'épéee pour un total de "+atk+" point de dégats");
         adversaire.vit -= atk;
-        System.out.println("Joueur "+adversaire.joueur+" perd"+ atk +" point de dégats");
+        System.out.println("Joueur "+adversaire.joueur+" perd "+ atk +" point de dégats");
         if(adversaire.vit <= 0){
             System.out.println("Joueur "+adversaire.joueur+" est banni dans le royaume des ombres");
         }

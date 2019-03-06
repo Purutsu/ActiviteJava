@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class PersonnageInit {
     Personnage newPerso;
 
-    public Personnage choisirClasse(){
+    public void choisirClasse(){
         System.out.println("Veuillez choisir votre classe: 1)Guerrier, 2) Mage, 3)Rôdeuer");
         Scanner sc = new Scanner(System.in);
         try{
@@ -25,16 +25,16 @@ public class PersonnageInit {
             }
             else{
                 System.out.println("Valeur incorrecte ");
-                return choisirClasse();
+                choisirClasse();
             }
         }
         catch(InputMismatchException e){
             System.out.println("Veuillez n'entrer que des chiffres. ");
-            return choisirClasse();
+            choisirClasse();
         }
     }
 
-    public Personnage selectStats() {
+    public void selectStats() {
 
 
         Scanner sc = new Scanner(System.in);
@@ -64,22 +64,17 @@ public class PersonnageInit {
 
             } catch (InputMismatchException e) {
                 System.out.println("Vous pouvez seulement entrer des nombres !");
-                return selectStats();
+                selectStats();
             }
-
-
-            System.out.println("La somme de vos statistiques doit être égale a votre niveau de personnage !");
-
 
             if (newPerso.niveau == newPerso.force + newPerso.agi + newPerso.intelligence) {
 
                 tester = true;
             }
-
-
+            else{
+                System.out.println("La somme de vos statistiques doit être égale a votre niveau de personnage !");
+            }
         }
-
-        return newPerso;
     }
 
     public Personnage initPersonnage(){
