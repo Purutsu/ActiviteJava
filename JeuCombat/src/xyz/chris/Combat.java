@@ -13,46 +13,33 @@ public class Combat {
 
     public void commenceCombat() {
         boolean tester = false;
-        int nombre = 1;
-
         while (!tester) {
-
-            System.out.println("Choisissez votre attaque");
+            System.out.println("Joueur "+ p1.getJoueur() +" choisissez votre attaque (1: Attaque basique, 2: Attaque special)");
+            System.out.println("Il vous reste " + p1.getVit() + " point de vie");
             try {
                 Scanner sc = new Scanner(System.in);
-                int atkp1 = sc.nextInt();
+                int attaqueP1 = sc.nextInt();
 
-                if (atkp1 < 1 || atkp1 > 2) {
+                if (attaqueP1 < 1 || attaqueP1 > 2) {
                     System.out.println("Cette attaque n'existe pas");
-                }
-                else if (atkp1 == 1) {
-                    if(nombre == 1){
-                        nombre = 2;
+                } else if (attaqueP1 == 1) {
                         p1.attaqueBasic(p2);
-                    }
-                    else {
-                        nombre = 1;
-                        p2.attaqueBasic(p1);
-                    }
-                }
-                else {
-                    if(nombre == 1){
-                        nombre = 2;
+                } else {
                         p1.attaqueSpecial(p2);
-                    }
-                    else {
-                        nombre = 1;
-                        p2.attaqueSpecial(p1);
-                    }
                 }
-
-                if (p2.vit <= 0 || p1.vit <= 0){
+                if (p2.getVit() <= 0 || p1.getVit() <= 0){
                     tester = true;
                 }
             } catch (Exception e) {
                 System.out.println("Caractere invalide");
-
             }
+            SwapJoueur();
         }
+    }
+    private void SwapJoueur(){
+        Personnage fake;
+        fake =  this.p1;
+        this.p1 = this.p2;
+        this.p2 = fake;
     }
 }

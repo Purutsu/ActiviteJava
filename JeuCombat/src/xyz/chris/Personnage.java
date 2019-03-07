@@ -1,7 +1,8 @@
 package xyz.chris;
 
 abstract class Personnage {
-    protected int joueur, niveau, vit, force, agi, intelligence;
+    private int joueur, niveau, vit, force, agi, intelligence;
+    private String atkSpe, atkBase;
 
     Personnage(){}
     public int getJoueur(){
@@ -39,6 +40,18 @@ abstract class Personnage {
     }
     void setIntelligence(int intelligence){
         this.intelligence = intelligence;
+    }
+    public String getAtkSpe(){
+        return atkSpe;
+    }
+    void setAtkSpe(String atkSpe){
+        this.atkSpe = atkSpe;
+    }
+    public String getAtkBase(){
+        return atkBase;
+    }
+    void setAtkBase(String atkBase){
+        this.atkBase = atkSpe;
     }
 
     public abstract void attaqueBasic(Personnage adversaire);

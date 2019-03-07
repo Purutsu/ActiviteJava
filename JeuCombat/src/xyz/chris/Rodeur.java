@@ -1,22 +1,25 @@
 package xyz.chris;
 
 public class Rodeur extends Personnage {
-    Rodeur(){}
+    Rodeur(){
+        setAtkBase("Tir à l'Arc");
+        setAtkSpe("Concentration");
+    }
     @Override
     public void attaqueBasic(Personnage adversaire){
-        int atk = this.agi;
-        System.out.println("Joueur "+this.joueur+" attaque avec un Tir à l'Arc pour un total de "+atk+" point de dégats");
-        adversaire.vit -= atk;
-        System.out.println("Joueur "+adversaire.joueur+" perd "+ atk +" point de dégats");
-        if(adversaire.vit <= 0){
-            System.out.println("Joueur "+adversaire.joueur+" est banni dans le royaume des ombres");
+        int atk = this.getAgi();
+        System.out.println("Joueur "+this.getJoueur()+" attaque avec un "+this.getAtkBase()+" pour un total de "+atk+" point de dégats");
+        adversaire.setVit(adversaire.getVit()-atk);
+        System.out.println("Joueur "+adversaire.getJoueur()+" perd "+ atk +" point de dégats");
+        if(adversaire.getVit() <= 0){
+            System.out.println("Joueur "+adversaire.getJoueur()+" a été dépouillé");
         }
     }
 
     @Override
     public void attaqueSpecial(Personnage adversaire){
-        int augmente = this.niveau/2;
-        this.agi += augmente;
-        System.out.println("Joueur "+this.joueur+" utilise Concentration et augmente son agilité d'un total de "+this.agi);
+        int augmente = this.getNiveau()/2;
+        this.setAgi(this.getAgi()+augmente);
+        System.out.println("Joueur "+this.getJoueur()+" utilise "+getAtkSpe()+" et augmente son agilité d'un total de "+this.getAgi());
     }
 }
