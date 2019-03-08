@@ -1,9 +1,14 @@
 package xyz.chris;
-
+/**
+ * abstract class representing a character
+ */
 abstract class Personnage {
     private int joueur, niveau, vit, force, agi, intelligence;
     private String atkSpe, atkBase;
 
+    /**
+     * Never ever
+     */
     Personnage(){}
 
     /**

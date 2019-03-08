@@ -1,6 +1,12 @@
 package xyz.chris;
 
+/**
+ * This represents a character of the rogue class
+ */
 public class Rodeur extends Personnage {
+    /**
+     * init rogue
+     */
     Rodeur(){
         setAtkBase("Tir a l'Arc");
         setAtkSpe("Concentration");

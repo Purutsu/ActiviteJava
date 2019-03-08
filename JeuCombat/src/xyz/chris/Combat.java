@@ -2,6 +2,9 @@ package xyz.chris;
 
 import java.util.Scanner;
 
+/**
+ * Manages everything related to fight between 2 players
+ */
 public class Combat {
     private Personnage p1;
     private Personnage p2;

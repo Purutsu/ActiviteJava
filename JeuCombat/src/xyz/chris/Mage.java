@@ -1,6 +1,12 @@
 package xyz.chris;
 
+/**
+ * This represents a character of the mage class
+ */
 public class Mage extends Personnage {
+    /**
+     * init mage
+     */
     Mage(){
         setAtkBase("Boule de Feu");
         setAtkSpe("Soin");

@@ -3,6 +3,9 @@ package xyz.chris;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Init a character class and stats
+ */
 public class PersonnageInit {
     Personnage newPerso;
     /**

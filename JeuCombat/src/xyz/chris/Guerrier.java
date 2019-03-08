@@ -1,6 +1,11 @@
 package xyz.chris;
-
+/**
+ * This represents a character of the warrior class
+ */
 public class Guerrier extends Personnage {
+    /**
+     *init warrior
+     */
     Guerrier(){
         setAtkBase("Coup d'epee");
         setAtkSpe("Coup de Rage");
