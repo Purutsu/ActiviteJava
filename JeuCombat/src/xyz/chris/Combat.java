@@ -6,11 +6,19 @@ public class Combat {
     private Personnage p1;
     private Personnage p2;
 
+    /**
+     *Initialize the player instances
+     * @param p1 first player
+     * @param p2 second player
+     */
     Combat(Personnage p1, Personnage p2){
         this.p1 = p1;
         this.p2 = p2;
     }
 
+    /**
+     *The fight begins, may the strongest warrior win
+     */
     public void commenceCombat() {
         boolean tester = false;
         while (!tester) {
@@ -36,6 +44,10 @@ public class Combat {
             SwapJoueur();
         }
     }
+
+    /**
+     * Changes which character is allowed to play
+     */
     private void SwapJoueur(){
         Personnage fake;
         fake =  this.p1;
