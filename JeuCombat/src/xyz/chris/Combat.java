@@ -25,8 +25,7 @@ public class Combat {
     public void commenceCombat() {
         boolean tester = false;
         while (!tester) {
-            System.out.println("Joueur "+ p1.getJoueur() +" veuillez choisir votre action (1 : Attaque Basique, 2 : Attaque Spéciale)");
-            System.out.println("Il vous reste " + p1.getVit() + " point de vie");
+            System.out.println("Joueur "+ p1.getJoueur() +" ("+p1.getVit()+" Vitalité)veuillez choisir votre action (1 : Attaque Basique, 2 : Attaque Spﾃｩciale)");
             try {
                 Scanner sc = new Scanner(System.in);
                 int attaqueP1 = sc.nextInt();
