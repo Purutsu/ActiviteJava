@@ -26,6 +26,7 @@ public class Mage extends Personnage {
         System.out.println("Joueur "+adversaire.getJoueur()+" perd "+ atk +" points de vie");
         if(adversaire.getVit() <= 0){
             System.out.println("Joueur "+adversaire.getJoueur()+" est mort");
+            System.out.println("Joueur "+adversaire.getJoueur()+" a perdu !");
         }
     }
 

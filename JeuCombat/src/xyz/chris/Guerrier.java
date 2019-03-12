@@ -25,6 +25,7 @@ public class Guerrier extends Personnage {
         System.out.println("Joueur "+adversaire.getJoueur()+" perd "+ atk +" points de vie");
         if(adversaire.getVit() <= 0){
             System.out.println("Joueur "+adversaire.getJoueur()+" est mort");
+            System.out.println("Joueur "+adversaire.getJoueur()+" a perdu !");
         }
     }
 
@@ -43,6 +44,7 @@ public class Guerrier extends Personnage {
         System.out.println("Joueur "+this.getJoueur()+" perd "+feedback +" points de vie");
         if(adversaire.getVit() <= 0){
             System.out.println("Joueur "+adversaire.getJoueur()+" est mort");
+            System.out.println("Joueur "+adversaire.getJoueur()+" a perdu !");
         }
     }
 }
