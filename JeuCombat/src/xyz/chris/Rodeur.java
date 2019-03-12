@@ -21,7 +21,7 @@ public class Rodeur extends Personnage {
     @Override
     public void attaqueBasic(Personnage adversaire){
         int atk = this.getAgi();
-        System.out.println("Joueur "+this.getJoueur()+" utilise "+this.getAtkBase()+"et inflige "+atk+" dommages");
+        System.out.println("Joueur "+this.getJoueur()+" utilise "+this.getAtkBase()+" et inflige "+atk+" dommages");
         adversaire.setVit(adversaire.getVit()-atk);
         System.out.println("Joueur "+adversaire.getJoueur()+" perd "+ atk +" points de vie");
         if(adversaire.getVit() <= 0){
