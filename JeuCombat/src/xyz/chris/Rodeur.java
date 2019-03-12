@@ -10,6 +10,8 @@ public class Rodeur extends Personnage {
     Rodeur(){
         setAtkBase("Tir a l'Arc");
         setAtkSpe("Concentration");
+        setCri("Woohoo");
+        setClasse("Rôdeur");
     }
 
     /**
@@ -19,11 +21,11 @@ public class Rodeur extends Personnage {
     @Override
     public void attaqueBasic(Personnage adversaire){
         int atk = this.getAgi();
-        System.out.println("Joueur "+this.getJoueur()+" attaque avec un "+this.getAtkBase()+" pour un total de "+atk+" point de degats");
+        System.out.println("Joueur "+this.getJoueur()+" utilise "+this.getAtkBase()+"et inflige "+atk+" dommages");
         adversaire.setVit(adversaire.getVit()-atk);
-        System.out.println("Joueur "+adversaire.getJoueur()+" perd "+ atk +" point de degats");
+        System.out.println("Joueur "+adversaire.getJoueur()+" perd "+ atk +" points de vie");
         if(adversaire.getVit() <= 0){
-            System.out.println("Joueur "+adversaire.getJoueur()+" a ete depouille");
+            System.out.println("Joueur "+adversaire.getJoueur()+" est mort");
         }
     }
 
@@ -35,6 +37,6 @@ public class Rodeur extends Personnage {
     public void attaqueSpecial(Personnage adversaire){
         int augmente = this.getNiveau()/2;
         this.setAgi(this.getAgi()+augmente);
-        System.out.println("Joueur "+this.getJoueur()+" utilise "+getAtkSpe()+" et augmente son agi d'un total de "+this.getAgi());
+        System.out.println("Joueur "+this.getJoueur()+" utilise "+getAtkSpe()+" et gagne "+this.getAgi()+ " en agilité");
     }
 }

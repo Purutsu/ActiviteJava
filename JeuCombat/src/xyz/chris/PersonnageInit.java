@@ -11,28 +11,26 @@ public class PersonnageInit {
     /**
     *Allows to choose your class between Mage, Warrior and Rogue
     */
-    public void choisirClasse(){
-        System.out.println("Veuillez choisir votre classe: 1)Guerrier, 2) Mage, 3)Rôdeuer");
+    public void choisirClasse(int nombreJoueur){
+        System.out.println("Création du personnage du Joueur" + nombreJoueur);
+        System.out.println("Veuillez choisir la classe de votre personnage ( 1 : Guerrier, 2 : Rodeur, 3 : Mage)");
         Scanner sc = new Scanner(System.in);
         try{
             int val = sc.nextInt();
             if (val == 1){
-                System.out.println("Vous etes désormais un(e) puissant(e) guerrier(e), sans peur et sans reproche");
                 newPerso = new Guerrier();
-            } else if (val == 2){
-                System.out.println("Vous etes désormais un mage aux pouvoirs sans limite. Ils ne passeront pas!");
-                newPerso = new Mage();
             } else if (val == 3){
-                System.out.println("Vous etes désormais un rôdeur malin. Vous etes pret a tout pour l'argent");
+                newPerso = new Mage();
+            } else if (val == 2){
                 newPerso = new Rodeur();
             } else{
                 System.out.println("Valeur incorrecte ");
-                choisirClasse();
+                choisirClasse(nombreJoueur);
             }
         }
         catch(InputMismatchException e){
             System.out.println("Veuillez n'entrer que des chiffres. ");
-            choisirClasse();
+            choisirClasse(nombreJoueur);
         }
     }
 
@@ -45,16 +43,16 @@ public class PersonnageInit {
         while (!tester) {
             int stats;
             try {
-                System.out.println("Veuillez choisir votre niveau (1-100)");
+                System.out.println("Niveau du personnage ?");
                 stats = sc.nextInt();
                 newPerso.setNiveau(stats);
-                System.out.println("Votre force?");
+                System.out.println("Force du personnage ?");
                 stats = sc.nextInt();
                 newPerso.setForce(stats);
-                System.out.println("Votre agilité?");
+                System.out.println("Agilité du personnage ?");
                 stats = sc.nextInt();
                 newPerso.setAgi(stats);
-                System.out.println("Votre intelligence?");
+                System.out.println("Intelligence du personnage ?");
                 stats = sc.nextInt();
                 newPerso.setIntelligence(stats);
                 newPerso.setVit(5 * newPerso.getNiveau());
@@ -73,8 +71,8 @@ public class PersonnageInit {
     /**
      *Calls the choisirClasse and selectStats methods in order to create a new character from scratch
      */
-    public Personnage initPersonnage(){
-        this.choisirClasse();
+    public Personnage initPersonnage(int nombreJoueur){
+        this.choisirClasse(nombreJoueur);
         this.selectStats();
         return newPerso;
     }

@@ -4,7 +4,7 @@ package xyz.chris;
  */
 abstract class Personnage {
     private int joueur, niveau, vit, force, agi, intelligence;
-    private String atkSpe, atkBase;
+    private String atkSpe, atkBase, cri, nomClasse;
 
     /**
      * Never ever
@@ -129,6 +129,36 @@ abstract class Personnage {
      */
     void setAtkBase(String atkBase){
         this.atkBase = atkBase;
+    }
+
+    /**
+     *get character's special attack
+     */
+    public String getCri(){
+        return cri;
+    }
+
+    /**
+     *set character's special attack
+     * @param classe the name of the character's class
+     */
+    void setClasse(String classe){
+        this.nomClasse = classe;
+    }
+
+    /**
+     *get character's special attack
+     */
+    public String getClasse(){
+        return nomClasse;
+    }
+
+    /**
+     *set character's special attack
+     * @param cri the name of the character's scream sound
+     */
+    void setCri(String cri){
+        this.cri = cri;
     }
 
     /**
